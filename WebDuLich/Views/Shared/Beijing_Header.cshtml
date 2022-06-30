@@ -1,0 +1,121 @@
+﻿
+@model IEnumerable<WebDuLich.Models.Entities.Country>
+
+<header>
+    <div class="nav">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid" style="background-color: white">
+                <div class="brand">
+                    <a class="navbar-brand" href="~/Home/Index" style="margin-left: 8px;"><img src="~/Content/image/logo.png" alt=""></a>
+                </div>
+                <!--                        <div class="button-toggler">-->
+                <!--                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">-->
+                <!--                            <span class="navbar-toggler-icon"></span>-->
+                <!--                        </button>-->
+                <!--                        </div>-->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        @*@foreach (var l in Model)
+        {
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">@l.NavName</a>
+            </li>
+        }*@
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">HOLIDAYS</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                DESTIONATIONS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @foreach (var l in Model)
+                                {
+                                    <li id="@l.CountryId"><a class="dropdown-item">@l.CountryName</a></li>
+                                }
+                                @*<li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" >Something else here</a></li>*@
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">FLIGHTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">HOTELS</a>
+                        </li>
+
+
+                        @{
+                            if (Session["idUser"] != null && Session["Roles"].Equals("user"))
+                            {
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="~/Home/Logout">Logout</a>
+                                </li>
+
+                            }
+                            else
+                            if (Session["idUser"] != null && Session["Roles"].Equals("admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="~/Admin/WebAdmin/Index">Admin</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="~/Home/Logout">Logout</a>
+                                </li>
+
+                            }
+                            else
+                            {
+                                <li class="nav-item ">
+                                    <a class="nav-link  active " href="~/Home/login" style="color: #38C860">Login</a>
+                                    @*<button class="  btn js-buy-ticket active" > Login</button>*@
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link active js-buy-ticket  btn-successs" style="color:white" href="~/Home/Register">Sign up</a>
+
+                                    @*<button class=" btn js-buy-ticket active" > Sign up</button>*@
+                                </li>
+                            }
+                        }
+
+
+                    </ul><div class="clear"></div>
+                </div>
+                <label for="nav-mobile-input" class="nav__bars-btn">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+                </label>
+                <input type="checkbox" hidden class="nav__input" id="nav-mobile-input">
+                <label for="nav-mobile-input" class="nav__overlay"></label>
+
+                <nav class="nav__mobile">
+                    <ul class="nav__mobile-list">
+                        <li><a href="" class="nav__mobile-link">HOLIDAYS</a></li>
+                        <li><a href="" class="nav__mobile-link">DESTINATIONS</a></li>
+                        <li><a href="" class="nav__mobile-link">FLIGHTS</a></li>
+                        <li><a href="" class="nav__mobile-link">HOTELS</a></li>
+                        <li><a class="nav__link" href="#" id="login-mobile">Log in</a></li>
+                        <li><a class="nav__link" href="#" id="sign-up-mobile">Sign up</a></li>
+                    </ul>
+                    <label for="nav-mobile-input" class="nav__mobile-close">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                    </label>
+                </nav>
+            </div>
+        </nav>
+    </div>
+</header>
+@*<script>
+    $("li").click(function (e) {
+        var id = $(this).attr("id");
+
+        $.ajax({
+            url:"RenderProductByNameCountry2",
+            data: { CatId: id },
+            success: function (reponse) {
+                $("div.content").html(reponse);
+            }
+        });
+    });
+</script>*@
+

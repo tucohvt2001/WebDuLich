@@ -1,0 +1,303 @@
+﻿
+@model WebDuLich.Models.Entities.Info
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Beijing.cshtml";
+}
+
+@*@model WebDuLich.Models.Entities.Order*@
+
+
+
+
+<br />
+<br />
+<br />
+<div class="search_destination">
+    <div class="search-form">
+        <form class="d-flex search">
+            <input class="form-control" type="search" placeholder="Search your destinations" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" style="background-color: #38C860; border: none"><img src="~/Content/image/search.png" alt=""></button>
+        </form>
+    </div>
+</div>
+<div class="body_content">
+    <div class="row tour-details">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <img src="@Model.Image" alt="" style="width: 100%">
+                    <h4>@Model.Name</h4>
+                    <p>@Model.Description</p>
+                    <hr>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <ol class="list-group">
+                        <li class="list-title">TOUR DETAILS</li>
+                        
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Starting on</div>
+                                <p>22 Oct 2022</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Traveller - Room wise</div>
+                                <p>2 Adults in - Room</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Time</div>
+                                <p>4 days 3 nights</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start" style="padding-top: 20px">
+                            <p>
+                                <span>$@Model.UnitPrice</span>
+                                @*<button class="btn btn-success js-buy-ticket">Booking</button>*@
+                            <a href="~/Home/Booking" class="btn btn-success">Booking</a>
+
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row package-details">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <h4>Package</h4>
+                    <p>Discover the breathtaking beauty of China, enjoy some of the most spectacular scenery in China. Out luxury cruise features state of the art facilities, this offer includes:</p>
+                    <div class="row tour-package">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="tour-package-icon">
+                                <img src="~/Content/image/hotel-icon.png" alt="">
+                            </div>
+                            <p>
+                                3 Nights Luxury
+                                Accommodation in 4 or 5
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="tour-package-icon">
+                                <img src="~/Content/image/meal-icon.png" alt="">
+                            </div>
+                            <p>7 Breakfasts, 2 Lunches in Hotel</p>
+                        </div>
+                    </div>
+                    <div class="row tour-package">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="tour-package-icon">
+                                <img src="~/Content/image/vehicle-icon.png" alt="">
+                            </div>
+                            <p>
+                                Domestic transfers by
+                                private A/C vehicles
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="tour-package-icon">
+                                <img src="~/Content/image/guide-icon.png" alt="">
+                            </div>
+                            <p>English speaking tour guide</p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row day-plans">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <h4>Day Plans</h4>
+                    <div class="day-plans-container">
+                        <h5>Day 1</h5>
+                        <p class="plan-title">Beijing City</p>
+                        <div class="row plan-content">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="~/Content/image/pk1.png" alt="" style="width: 100%">
+                            </div>
+                            <div class="col-lg-8 col-md-6">
+                                <p>
+                                    Welcome to Beijing – a land of supreme skyline, dynamic landscape and exotic cuisine.
+                                    After arriving at Hong Kong Airport, you would be greeted by a Gopanda
+                                    representative who shall assist you in the hotel transfer on a shared basis in coach
+                                </p>
+                                <ul>
+                                    <li>Arrival in Beijing via flight</li>
+                                    <li>Transfeer to hotel via shared vehicle</li>
+                                    <li>Check-in to Hotel in Beijing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-plans-container">
+                        <h5>Day 2</h5>
+                        <p class="plan-title">Zǐjìncheng</p>
+                        <div class="row plan-content">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="~/Content/image/pk2.png" alt="" style="width: 100%">
+                            </div>
+                            <div class="col-lg-8 col-md-6">
+                                <p>
+                                    Welcome to Beijing – a land of supreme skyline, dynamic landscape and exotic cuisine.
+                                    After arriving at Hong Kong Airport, you would be greeted by a Gopanda
+                                    representative who shall assist you in the hotel transfer on a shared basis in coach
+                                </p>
+                                <ul>
+                                    <li>Arrival in Beijing via flight</li>
+                                    <li>Transfeer to hotel via shared vehicle</li>
+                                    <li>Check-in to Hotel in Beijing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-plans-container">
+                        <h5>Day 3</h5>
+                        <p class="plan-title">Xian</p>
+                        <div class="row plan-content">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="~/Content/image/pk3.png" alt="" style="width: 100%">
+                            </div>
+                            <div class="col-lg-8 col-md-6">
+                                <p>
+                                    Welcome to Beijing – a land of supreme skyline, dynamic landscape and exotic cuisine.
+                                    After arriving at Hong Kong Airport, you would be greeted by a Gopanda
+                                    representative who shall assist you in the hotel transfer on a shared basis in coach
+                                </p>
+                                <ul>
+                                    <li>Arrival in Beijing via flight</li>
+                                    <li>Transfeer to hotel via shared vehicle</li>
+                                    <li>Check-in to Hotel in Beijing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-plans-container">
+                        <h5>Day 4</h5>
+                        <p class="plan-title">Shanghai</p>
+                        <div class="row plan-content">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="~/Content/image/pk4.png" alt="" style="width: 100%">
+                            </div>
+                            <div class="col-lg-8 col-md-6">
+                                <p>
+                                    Welcome to Beijing – a land of supreme skyline, dynamic landscape and exotic cuisine.
+                                    After arriving at Hong Kong Airport, you would be greeted by a Gopanda
+                                    representative who shall assist you in the hotel transfer on a shared basis in coach
+                                </p>
+                                <ul>
+                                    <li>Arrival in Beijing via flight</li>
+                                    <li>Transfeer to hotel via shared vehicle</li>
+                                    <li>Check-in to Hotel in Beijing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+
+@*@using (Html.BeginForm())
+    {
+        <div class="modal js-modal">
+            <div class="modal-container js-modal-container">
+                <div class="modal-close js-modal-close">
+                    <i class="ti-close"></i>
+                </div>
+                @Html.AntiForgeryToken()e
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="modal-body">
+                    <label for="ticket-quantity" class="modal-label">
+                        <h2 style="text-align:center;">Booking</h2>
+                    </label>
+                    <label for="ticket-quantity" class="modal-label">
+                        @Html.LabelFor(model => model.InfoId, "InfoId")
+                    </label>
+                    @Html.DropDownList("InfoId", null, htmlAttributes: new { @id = "ticket-quantity", @class = "modal-input" })
+                    @Html.ValidationMessageFor(model => model.InfoId, "", new { @class = "text-danger" })
+                    <label for="ticket-quantity" class="modal-label">
+                        @Html.LabelFor(model => model.CustomerId, "CustomerId")
+                    </label>
+
+                    @Html.DropDownList("CustomerId", null, htmlAttributes: new { @id = "ticket-quantity", @class = "modal-input" })
+                    @Html.ValidationMessageFor(model => model.CustomerId, "", new { @class = "text-danger" })
+
+
+                    <label for="ticket-quantity" class="modal-label">
+                        @Html.LabelFor(model => model.OrderDate)
+                    </label>
+
+                    @Html.EditorFor(model => model.OrderDate, new { htmlAttributes = new { @id = "ticket-quantity", @type = "text", @class = "modal-input" } })
+                    @Html.ValidationMessageFor(model => model.OrderDate, "", new { @class = "text-danger" })
+                    <label for="ticket-quantity" class="modal-label">
+                        @Html.LabelFor(model => model.Address)
+                    </label>
+
+                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @id = "ticket-quantity", @type = "text", @class = "modal-input" } })
+                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+
+                    <label for="ticket-quantity" class="modal-label">
+                        @Html.LabelFor(model => model.Description)
+                    </label>
+
+                    @Html.TextAreaFor(model => model.Description, new { htmlAttributes = new { @id = "ticket-quantity", @type = "text", @class = "modal-input" } })
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+
+                    <button id="buy-tickets" type="submit" value="Create" class="btn btn-primary">Book</button>
+
+                </div>
+
+            </div>
+        </div>
+    }
+
+                    }
+    <script>
+
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        const modalClose = document.querySelector('.js-modal-close')
+
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
+
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        modalClose.addEventListener('click', hideBuyTickets)
+
+        modal.addEventListener('click', hideBuyTickets)
+
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>*@
+

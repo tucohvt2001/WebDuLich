@@ -1,0 +1,115 @@
+﻿@model IEnumerable<WebDuLich.Models.Entities.Info>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="search-container" id="search">
+            <!--                    <img src="~/Content/image/banner.png" alt="" style="width:100%;">-->
+            <!--                    <div class="bottom-left"></div>-->
+            <!--                    <div class="top-left"></div>-->
+            <!--                    <div class="top-right"></div>-->
+            <!--                    <div class="bottom-right"></div>-->
+            <div class="centered" id="center-banner">
+                <div class="banner-content">
+                    <div class="banner-heading"><h1>Search your next Trip</h1></div>
+                    <div class="banner-descripsion"><p>Trips, experiences and places. All in one service.</p></div>
+                    <div class="search-form" style="position: absolute; width: 100%">
+                        <form class="d-flex search">
+                            <input class="form-control" id="Searched" type="search" placeholder="Choose your destination" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit" style="background-color: #38C860; border: none"><img src="~/Content/image/search.png" alt=""></button>
+                        </form>
+                        <div class="hot-search">
+                            <a href="">Great Wall</a>
+                            <a href="">Shanghai</a>
+                            <a href="">Forbidden City</a>
+                            <a href="">Guangzhou</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="service" style="margin-top: 40px">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <a href=""><img src="~/Content/image/002-discount.png" alt=""></a>
+                <h5>BEST PRICE GUARANTEE</h5>
+                <p>With 500+ suppliers and the purchasing power of 300 million members, Gopanda can save you more!</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <a href=""><img src="~/Content/image/003-china.png" alt=""></a>
+                <h5>TRAVEL EVERYWHERE IN CHINA</h5>
+                <p>Travel worry-free knowing that we're here if you need us, 24 hours a day</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <a href=""><img src="~/Content/image/001-customer-service.png" alt=""></a>
+                <h5>CUSTOM CARE 24/7</h5>
+                <p>Cheap Domestic Flights, International Cheap Flights</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+<img src="~/Content/image/Frame.png" alt="frame" class="center">
+<div class="package" id="more">
+    <div class="row">
+        <h3 style="text-align: center">OURS PACKAGE</h3>
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="row">
+                @foreach (var l in Model)
+                {
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card">
+                            <a href="@Url.Action("Beijing_Main","Home",new { Id = l.Id})"><img src="@l.Image" class="card-img-top" alt="..."></a>
+                            <div class="best-package">
+                                <img src="~/Content/image/bestpk.png" alt="" class="best">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">@l.Name </h5>
+                                <div class="card-body_price">
+                                    <p>
+                                        From <span>$@l.UnitPrice</span>
+                                        <a href="@Url.Action("Beijing_Main","Home",new { Id = l.Id})" class="btn btn-primary">Details</a>
+
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+<img src="~/Content/image/Frame.png" alt="frame" class="center">
+@*<script>
+        $("#Searched").keyup(function){
+            var search = $("#Searched").val();
+            $.ajax({
+                url: "Search",
+                data: { Name: Searched },
+                success: function (response) {
+                    $("div.row").html(response);
+                }
+            })
+        }
+    </script>*@
+
+@*<div class="container"style="background-color: #38C860">
+    <h2 style="text-align:center">~~~ Comment ~~~</h2>
+    <textarea name="abc" ></textarea>
+    <script src="~/Content/ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('abc')
+    </script>
+</div>
+<img src="~/Content/image/Frame.png" alt="frame" class="center">*@
+

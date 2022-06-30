@@ -1,0 +1,171 @@
+@media (max-width: 1400px) {
+    .ava img{
+        width: 44px;
+    }
+}
+/*Tablet*/
+@media (min-width: 740px) and (max-width: 1023px){
+    .banner-heading h1{
+        font-size: 56px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .hot-search a:first-child{
+       display: none;
+    }
+
+    .banner-descripsion{
+        font-size: 16px;
+    }
+
+    #search{
+        height: 800px;
+    }
+
+    .search-container h2 {
+        font-size: 32px;
+        color: white;
+    }
+
+    .ava img{
+        width: 44px;
+    }
+
+    .app-content{
+        flex-direction: column;
+        display: block;
+        padding: 20px;
+    }
+
+    .app-intro h1{
+        font-size: 28px;
+    }
+
+    .app-intro p{
+        font-size: 12px;
+    }
+
+    .download img{
+        padding: 0;
+        width: 5.25rem;
+        height: auto;
+    }
+
+    .store a img{
+        width: 80%;
+        padding: 4px;
+    }
+
+    .appstore{
+        width: 5rem;
+    }
+
+    #img1{
+        height: 262px;
+    }
+
+    #img2{
+        width: 289.5px;
+        height: 334.5px;
+    }
+
+    .select-country {
+        width: 172px;
+    }
+
+    .select-country a{
+        font-size: 12px;
+        padding: .25rem .25rem;
+    }
+
+    #col-ft1 select{
+        font-size: 16px;
+    }
+
+}
+/*Mobile*/
+@media (max-width: 739px) {
+    .col-lg-4 .card, .col-lg-4 .deals, .col-lg-3 .card{
+        margin-top: 20px;
+    }
+
+    .banner-heading h1{
+        font-size: 40px;
+    }
+
+    .hot-search{
+        display: none;
+    }
+
+    .banner-descripsion{
+        font-size: 12px;
+    }
+
+    #search{
+        height: 600px;
+    }
+
+    .search-container h2 {
+        font-size: 32px;
+        color: white;
+    }
+
+    .ava img{
+        width: 56px;
+    }
+
+    .app-content{
+        flex-direction: column;
+        display: block;
+        padding: 20px;
+    }
+
+    .app-intro h1{
+        font-size: 20px;
+    }
+
+    .app-intro p{
+        font-size: 8px;
+    }
+
+    .download img{
+        padding: 0;
+        width: 5.25rem;
+        height: auto;
+    }
+
+    .store a img{
+        width: 80%;
+        padding: 4px;
+    }
+
+    .appstore{
+        width: 5rem;
+    }
+
+    #img1{
+        width: 951px;
+        height: 262px;
+    }
+
+    #img2{
+        width: 289.5px;
+        height: 334.5px;
+        left: 90%;
+    }
+
+    .select-country{
+        width: 228px;
+    }
+
+    #col-ft1{
+        margin-left: 30px;
+    }
+
+    #col-ft1 select{
+        font-size: 16px;
+    }
+}
